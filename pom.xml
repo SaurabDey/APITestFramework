@@ -22,6 +22,11 @@
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.15</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -39,7 +44,11 @@
 			<artifactId>allure-rest-assured</artifactId>
 			<version>2.13.3</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
