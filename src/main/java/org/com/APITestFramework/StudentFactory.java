@@ -1,4 +1,4 @@
-package org.student.methods;
+package org.com.APITestFramework;
 
 import static io.restassured.RestAssured.given;
 
@@ -18,7 +18,7 @@ public class StudentFactory
 	@Step("Student:Get Information with end point {0}")
 	public static Response getInformation(String endpoint)
 	{
-		Response resp = given().contentType("application/json").when().get(endpoint);
+		Response resp = given().spec(Specifications.requestSpec()).when().get(endpoint);
 		return resp;
 	
 	}
@@ -33,7 +33,7 @@ public class StudentFactory
 		student.setProgramme(prog);
 		student.setCourses(courses);
 		
-		Response resp =given().contentType("application/json").body(student).when().post(endpoint);
+		Response resp =given().spec(Specifications.requestSpec()).body(student).when().post(endpoint);
 		return resp;
 	}
 
@@ -49,7 +49,7 @@ public class StudentFactory
 		student.put("programme", title);
 		student.put("courses", courses);
 
-		Response resp =given().contentType("application/json").body(student).when().put(endpoint);
+		Response resp =given().spec(Specifications.requestSpec()).body(student).when().put(endpoint);
 		return resp;
 	}
 	
@@ -59,7 +59,7 @@ public class StudentFactory
 		StudentClass stu = new StudentClass();
 		stu.setEmail(emailAddress);
 		
-		Response resp = given().contentType("application/json").body(stu).when().patch(endpoint);
+		Response resp = given().spec(Specifications.requestSpec()).body(stu).when().patch(endpoint);
 		return resp;
 	
 	}
@@ -67,7 +67,7 @@ public class StudentFactory
 	@Step("Student:Delete Information with end point {0}")
 	public static Response deteleInformation(String endpoint)
 	{
-		Response resp = given().contentType("application/json").when().delete(endpoint);
+		Response resp = given().spec(Specifications.requestSpec()).when().delete(endpoint);
 		return resp;
 	
 	}

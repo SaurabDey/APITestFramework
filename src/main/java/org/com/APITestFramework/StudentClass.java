@@ -1,4 +1,4 @@
-package org.student.methods;
+package org.com.APITestFramework;
 
 import java.util.List;
 
