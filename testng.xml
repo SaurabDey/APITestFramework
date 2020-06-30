@@ -3,7 +3,8 @@
 <suite name="Suite" parallel="tests">
   <test name="Test">
     <classes>
-      <class name="org.student.methods.StudentTestClass"/>
+      <!--<class name="org.student.methods.StudentTestClass"/>-->
+      <class name="org.student.methods.DatabaseConnect"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
