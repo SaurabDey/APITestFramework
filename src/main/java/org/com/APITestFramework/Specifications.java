@@ -20,7 +20,7 @@ public class Specifications {
 		ResponseSpecBuilder responsebuilder= new ResponseSpecBuilder() ;
 		responsebuilder.expectStatusCode(expectedStatusCode);
 		responsebuilder.expectContentType("application/json");
-		responsebuilder.expectResponseTime(lessThanOrEqualTo(5L),TimeUnit.SECONDS);
+		responsebuilder.expectResponseTime(lessThanOrEqualTo(15L),TimeUnit.SECONDS);
 		responseSpe=responsebuilder.build();
 		
 		return responseSpe;
